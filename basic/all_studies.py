@@ -21,6 +21,8 @@ def get_all_studies_with_measurements(
     """
     Search and filter studies with embedded measurement data for analytics.
     
+    **IMPORTANT: This endpoint requires staff or superadmin permissions.**
+    
     This advanced function combines study information with measurement results,
     enabling powerful filtering and analysis across your entire dataset.
     Perfect for research, quality assurance, and clinical analytics.
@@ -115,6 +117,8 @@ def get_study_with_measurements(uuid: str) -> Dict[str, Any]:
     """
     Retrieve comprehensive study data with embedded measurement results.
     
+    **IMPORTANT: This endpoint requires staff or superadmin permissions.**
+    
     This function provides a complete view of a study including patient demographics,
     analysis results, and all measurements in a single response - ideal for
     detailed analysis or comprehensive reporting.
@@ -165,6 +169,8 @@ def get_study_metrics() -> Dict[str, Any]:
     """
     Retrieve analytics and usage statistics across your entire study database.
     
+    **IMPORTANT: This endpoint requires staff or superadmin permissions.**
+    
     This function provides valuable insights for administrators, researchers,
     and quality assurance teams by aggregating data across all studies and analyses.
     
@@ -208,6 +214,8 @@ def get_study_metrics() -> Dict[str, Any]:
 def get_filter_metadata() -> Dict[str, Any]:
     """
     Discover available filtering options for building dynamic search interfaces.
+    
+    **IMPORTANT: This endpoint requires staff or superadmin permissions.**
     
     This function helps you understand what filter values are available in your
     dataset, perfect for building search UIs, analytics dashboards, or

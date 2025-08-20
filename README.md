@@ -123,11 +123,11 @@ def handle_webhook_notification(payload):
 
 ### Advanced Features
 
-| Feature              | File                                           | Description                           |
-|----------------------|------------------------------------------------|---------------------------------------|
-| **Advanced Studies** | [`basic/all_studies.py`](basic/all_studies.py) | Filtering, metrics, analytics         |
-| **Webhooks**         | [`basic/webhooks.py`](basic/webhooks.py)       | Webhook management and configuration  |
-| **EchoGPT**          | [`basic/echogpt.py`](basic/echogpt.py)         | AI-powered natural language responses |
+| Feature              | File                                           | Description                                                   |
+|----------------------|------------------------------------------------|---------------------------------------------------------------|
+| **Advanced Studies** | [`basic/all_studies.py`](basic/all_studies.py) | Filtering, metrics, analytics (requires staff/superadmin)     |
+| **Webhooks**         | [`basic/webhooks.py`](basic/webhooks.py)       | Webhook management and configuration                          |
+| **EchoGPT**          | [`basic/echogpt.py`](basic/echogpt.py)         | AI-powered natural language responses                         |
 
 ### Complete Workflows
 
@@ -432,7 +432,7 @@ encephalon-examples/
 │   ├── dicom.py           # Learn DICOM file handling
 │   ├── scan.py            # Learn scan creation & monitoring
 │   ├── reports.py         # Learn result analysis
-│   ├── all_studies.py     # Learn advanced filtering & metrics
+│   ├── all_studies.py     # Learn advanced filtering & metrics (staff/superadmin only)
 │   ├── webhooks.py        # Learn webhook configuration
 │   └── echogpt.py         # Learn AI response handling
 ├── flows/                  # 🚀 Then try these: Complete workflows
