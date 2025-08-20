@@ -236,7 +236,8 @@ for pathology in report['pathology_conclusions']:
 
 #### How the Report System Works
 
-Understanding how Encephalon generates and manages reports is crucial for building effective integrations. Here's a comprehensive overview of the automated report generation process:
+Understanding how Encephalon generates and manages reports is crucial for building effective integrations. Here's a
+comprehensive overview of the automated report generation process:
 
 ##### 1. Report Generation Flow
 
@@ -247,7 +248,9 @@ Scan Created → AI Processing → Generate Conclusions → Create PDF → Store
 ```
 
 **Detailed Process:**
-1. **Scan Creation**: When you create a scan, a Report is automatically generated and linked to it (one-to-one relationship)
+
+1. **Scan Creation**: When you create a scan, a Report is automatically generated and linked to it (one-to-one
+   relationship)
 2. **AI Processing**: DICOM files are analyzed by specialized AI pipelines for each product
 3. **Post-processing**: AI results are aggregated into structured medical conclusions
 4. **PDF Generation**: Professional medical reports are created using HTML templates and converted to PDF
@@ -269,7 +272,7 @@ scan = create_scan(study_uuid, product="CARDIOVISION")
 # → Detailed aortic valve assessment and stenosis classification
 
 # ECHOGPT: AI-generated narrative reports
-scan = create_scan(study_uuid, product="ECHOGPT") 
+scan = create_scan(study_uuid, product="ECHOGPT")
 # → Natural language descriptions and clinical insights
 
 # MITRALVISION: Mitral valve specialized analysis
@@ -295,7 +298,7 @@ for measurement in measurements:
     print(f"{metric['acronym']}: {value} {metric['units']} (confidence: {confidence})")
 
 # Pathology Findings: Clinical classifications
-pathologies = report['pathology_conclusions'] 
+pathologies = report['pathology_conclusions']
 for pathology in pathologies:
     feature = pathology['pathology']['feature']['value']
     classification = pathology.get('pathology_output')
@@ -356,6 +359,7 @@ Reports are securely stored and accessed through the API:
 ##### 6. Integration Patterns
 
 **Polling Pattern** (Frontend + API):
+
 ```python
 # Wait for scan completion, then get report
 completed_scan = wait_for_scan_completion(scan_uuid)
@@ -365,6 +369,7 @@ report = get_report(report_uuid)
 ```
 
 **Webhook Pattern** (Server-to-Server):
+
 ```python
 def handle_webhook_notification(payload):
     scan_data = json.loads(payload)
@@ -374,7 +379,9 @@ def handle_webhook_notification(payload):
         # Process report asynchronously
 ```
 
-The report system is fully automated - once you create a scan, the entire pipeline runs asynchronously, processing DICOMs, running AI inference, generating conclusions, and producing professional medical PDF reports ready for clinical use.
+The report system is fully automated - once you create a scan, the entire pipeline runs asynchronously, processing
+DICOMs, running AI inference, generating conclusions, and producing professional medical PDF reports ready for clinical
+use.
 
 ### Webhook Configuration
 
@@ -457,20 +464,10 @@ automatically use these environment variables for authentication.
 
 ---
 
-## 📖 Additional Resources
+## 💬 Support & Contact
 
-- **OpenAPI Specification**: Complete API documentation with all endpoints, parameters, and response schemas
-- **Test Suite**: Comprehensive examples of mocking and testing API integrations
+For questions, issues, or feedback regarding the Encephalon API and these examples:
 
----
-
-## 🤝 Contributing
-
-This repository demonstrates best practices for Encephalon API integration:
-
-- **TDD Approach**: All functionality is test-driven
-- **Clean Code**: Linted with Ruff, well-documented
-- **Real Examples**: Uses actual DICOM files and realistic workflows
-- **Production Ready**: Includes error handling, authentication, and security best practices
-
-For questions or issues, please refer to the Encephalon API documentation or contact support.
+- **Email
+  **: [julio@icardio.ai](mailto:julio@icardio.ai), [roman@icardio.ai](mailto:roman@icardio.ai), [anna@icardio.ai](mailto:anna@icardio.ai), [jorge@icardio.ai](mailto:jorge@icardio.ai)
+- **Documentation**: Refer to the complete Encephalon API documentation for detailed specifications
