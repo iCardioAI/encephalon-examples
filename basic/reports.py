@@ -38,7 +38,7 @@ def get_reports(
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -106,7 +106,7 @@ def get_report(uuid: str) -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -145,7 +145,7 @@ def get_report_html(report_uuid: str) -> List[Dict[str, Any]]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -170,7 +170,7 @@ def get_echogpt_responses() -> List[Dict[str, Any]]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -194,7 +194,7 @@ def get_echogpt_response(uuid: str) -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -265,7 +265,7 @@ def create_user_measurement(
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -320,7 +320,7 @@ def get_api_version() -> Dict[str, str]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     

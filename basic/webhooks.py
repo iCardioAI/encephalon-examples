@@ -31,7 +31,7 @@ def create_webhook(url: str) -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -78,7 +78,7 @@ def get_webhooks(
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -124,7 +124,7 @@ def get_webhook(uuid: str) -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -165,7 +165,7 @@ def update_webhook(uuid: str, url: str) -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -210,7 +210,7 @@ def delete_webhook(uuid: str) -> None:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     

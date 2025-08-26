@@ -32,7 +32,7 @@ def upload_dicom(study_uuid: str, file_path: str) -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}"
+        "Authorization": f"Token {token}"  # Use 'Token' format for API_TOKEN authentication
     }
     
     with open(file_path, 'rb') as f:
@@ -82,7 +82,7 @@ def get_dicoms(
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -127,7 +127,7 @@ def get_dicom(uuid: str) -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -171,7 +171,7 @@ def download_dicom_file(uuid: str, filename: str, output_path: str) -> str:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}"
+        "Authorization": f"Token {token}"  # Use 'Token' format for API_TOKEN authentication
     }
     
     response = httpx.get(
@@ -218,7 +218,7 @@ def delete_dicom(uuid: str) -> None:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -261,7 +261,7 @@ def idempotent_dicom_upload(file_path: str) -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}"
+        "Authorization": f"Token {token}"  # Use 'Token' format for API_TOKEN authentication
     }
     
     with open(file_path, 'rb') as f:

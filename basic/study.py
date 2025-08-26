@@ -37,7 +37,7 @@ def get_studies(
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -101,7 +101,7 @@ def create_study(
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -149,7 +149,7 @@ def get_study(uuid: str) -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -189,7 +189,7 @@ def update_study(uuid: str, **updates) -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -231,7 +231,7 @@ def delete_study(uuid: str) -> None:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     

@@ -72,7 +72,7 @@ def get_all_studies_with_measurements(
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -153,7 +153,7 @@ def get_study_with_measurements(uuid: str) -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -199,7 +199,7 @@ def get_study_metrics() -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     
@@ -247,7 +247,7 @@ def get_filter_metadata() -> Dict[str, Any]:
     token = os.getenv("API_TOKEN")
     
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Token {token}",  # Use 'Token' format for API_TOKEN authentication
         "Content-Type": "application/json"
     }
     

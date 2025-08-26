@@ -451,16 +451,20 @@ encephalon-examples/
 
 ## 🔐 Setting Up Authentication
 
-All examples use bearer token authentication. Here's how to configure it:
+The Encephalon API uses Token authentication when using API_TOKEN credentials. Here's how to configure it:
 
 ```bash
 # Required environment variables - add these to your .env file
-API=https://api-mock.icardio.ai           # Encephalon API base URL
+API=https://api-service.icardio.ai        # Production Encephalon API endpoint
 API_TOKEN=your-api-token-here             # Your API authentication token
 ```
 
-**Important:** Replace `your-api-token-here` with your actual API token from the Encephalon dashboard. The examples will
-automatically use these environment variables for authentication.
+**Important:** 
+- Replace `your-api-token-here` with your actual API token from the Encephalon dashboard
+- The API URL should be `https://api-service.icardio.ai` for production use
+  - Note: `api-mock.icardio.ai` is a placeholder/mock endpoint definition and not an actual service
+- When using API_TOKEN, the authorization header format is: `Authorization: Token {API_TOKEN}`
+- The examples will automatically use these environment variables for authentication
 
 ---
 
@@ -468,6 +472,5 @@ automatically use these environment variables for authentication.
 
 For questions, issues, or feedback regarding the Encephalon API and these examples:
 
-- **Email
-  **: [julio@icardio.ai](mailto:julio@icardio.ai), [roman@icardio.ai](mailto:roman@icardio.ai), [anna@icardio.ai](mailto:anna@icardio.ai), [jorge@icardio.ai](mailto:jorge@icardio.ai)
+- **Email**: [julio@icardio.ai](mailto:julio@icardio.ai), [roman@icardio.ai](mailto:roman@icardio.ai), [anna@icardio.ai](mailto:anna@icardio.ai), [jorge@icardio.ai](mailto:jorge@icardio.ai)
 - **Documentation**: Refer to the complete Encephalon API documentation for detailed specifications

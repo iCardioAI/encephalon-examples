@@ -49,7 +49,7 @@ class TestScanFunctions:
         mock_post.assert_called_once_with(
             "https://api.example.com/api/v2/scans/",
             headers={
-                "Authorization": "Bearer test-token",
+                "Authorization": "Token test-token",  # Use 'Token' format for API_TOKEN authentication
                 "Content-Type": "application/json"
             },
             json={"study": "123e4567-e89b-12d3-a456-426614174000"}
@@ -70,7 +70,7 @@ class TestScanFunctions:
         mock_post.assert_called_once_with(
             "https://api.example.com/api/v2/scans/",
             headers={
-                "Authorization": "Bearer test-token",
+                "Authorization": "Token test-token",  # Use 'Token' format for API_TOKEN authentication
                 "Content-Type": "application/json"
             },
             json={
@@ -98,7 +98,7 @@ class TestScanFunctions:
         mock_get.assert_called_once_with(
             "https://api.example.com/api/v2/scans/",
             headers={
-                "Authorization": "Bearer test-token",
+                "Authorization": "Token test-token",  # Use 'Token' format for API_TOKEN authentication
                 "Content-Type": "application/json"
             },
             params={"study": "123e4567-e89b-12d3-a456-426614174000"}
@@ -119,7 +119,7 @@ class TestScanFunctions:
         mock_get.assert_called_once_with(
             "https://api.example.com/api/v2/scans/456e7890-e89b-12d3-a456-426614174000/",
             headers={
-                "Authorization": "Bearer test-token",
+                "Authorization": "Token test-token",  # Use 'Token' format for API_TOKEN authentication
                 "Content-Type": "application/json"
             }
         )
@@ -135,7 +135,7 @@ class TestScanFunctions:
         mock_delete.assert_called_once_with(
             "https://api.example.com/api/v2/scans/456e7890-e89b-12d3-a456-426614174000/",
             headers={
-                "Authorization": "Bearer test-token",
+                "Authorization": "Token test-token",  # Use 'Token' format for API_TOKEN authentication
                 "Content-Type": "application/json"
             }
         )

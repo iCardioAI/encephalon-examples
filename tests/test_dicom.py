@@ -50,7 +50,7 @@ class TestDicomFunctions:
         
         mock_post.assert_called_once()
         call_args = mock_post.call_args
-        assert call_args.kwargs["headers"]["Authorization"] == "Bearer test-token"
+        assert call_args.kwargs["headers"]["Authorization"] == "Token test-token"  # Use 'Token' format for API_TOKEN authentication
         assert "https://api.example.com/api/v2/dicoms/" in call_args.args
 
     @patch('httpx.get')
@@ -71,7 +71,7 @@ class TestDicomFunctions:
         mock_get.assert_called_once_with(
             "https://api.example.com/api/v2/dicoms/",
             headers={
-                "Authorization": "Bearer test-token",
+                "Authorization": "Token test-token",  # Use 'Token' format for API_TOKEN authentication
                 "Content-Type": "application/json"
             },
             params={"study": "123e4567-e89b-12d3-a456-426614174000"}
@@ -92,7 +92,7 @@ class TestDicomFunctions:
         mock_get.assert_called_once_with(
             "https://api.example.com/api/v2/dicoms/456e7890-e89b-12d3-a456-426614174000/",
             headers={
-                "Authorization": "Bearer test-token",
+                "Authorization": "Token test-token",  # Use 'Token' format for API_TOKEN authentication
                 "Content-Type": "application/json"
             }
         )
@@ -116,7 +116,7 @@ class TestDicomFunctions:
         
         mock_get.assert_called_once_with(
             "https://api.example.com/api/v2/dicoms/file/456e7890-e89b-12d3-a456-426614174000/image.dcm/",
-            headers={"Authorization": "Bearer test-token"},
+            headers={"Authorization": "Token test-token"},  # Use 'Token' format for API_TOKEN authentication
             follow_redirects=True
         )
         
@@ -133,7 +133,7 @@ class TestDicomFunctions:
         mock_delete.assert_called_once_with(
             "https://api.example.com/api/v2/dicoms/456e7890-e89b-12d3-a456-426614174000/",
             headers={
-                "Authorization": "Bearer test-token",
+                "Authorization": "Token test-token",  # Use 'Token' format for API_TOKEN authentication
                 "Content-Type": "application/json"
             }
         )
@@ -156,5 +156,5 @@ class TestDicomFunctions:
         
         mock_post.assert_called_once()
         call_args = mock_post.call_args
-        assert call_args.kwargs["headers"]["Authorization"] == "Bearer test-token"
+        assert call_args.kwargs["headers"]["Authorization"] == "Token test-token"  # Use 'Token' format for API_TOKEN authentication
         assert "https://api.example.com/api/v2/idempotent_dicom/" in call_args.args
